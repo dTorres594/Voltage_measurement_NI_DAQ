@@ -15,3 +15,5 @@
 *.aliases
 *.lvlps
 .cache/
+PantherScan.My Computer.bin
+PantherLAB_Log.csv
