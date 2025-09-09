@@ -14,7 +14,7 @@
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
 		<Item Name="Config" Type="Folder">
-			<Item Name="config.ini" Type="Document" URL="../config.ini"/>
+			<Item Name="config.ini" Type="Document" URL="../Config/config.ini"/>
 		</Item>
 		<Item Name="Modules" Type="Folder">
 			<Item Name="NI DAQ.lvlib" Type="Library" URL="../NI_DAQ/Libraries/NI DAQ/NI DAQ.lvlib"/>
@@ -42,6 +42,8 @@
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{78B7C763-FF03-4C4C-B1D2-73A8978B9C27}</Property>
+				<Property Name="Bld_supportedLanguage[0]" Type="Str">English</Property>
+				<Property Name="Bld_supportedLanguageCount" Type="Int">1</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">Battery monitor.exe</Property>
 				<Property Name="Destination[0].path" Type="Path">../builds/NI_AB_PROJECTNAME/App/Battery monitor.exe</Property>
@@ -49,19 +51,24 @@
 				<Property Name="Destination[0].type" Type="Str">App</Property>
 				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
 				<Property Name="Destination[1].path" Type="Path">../builds/NI_AB_PROJECTNAME/App/data</Property>
-				<Property Name="DestinationCount" Type="Int">2</Property>
+				<Property Name="Destination[2].destName" Type="Str">Config</Property>
+				<Property Name="Destination[2].path" Type="Path">../builds/NI_AB_PROJECTNAME/App/Config</Property>
+				<Property Name="DestinationCount" Type="Int">3</Property>
 				<Property Name="Source[0].itemID" Type="Str">{6BADCC2B-CE7B-4AC2-AA3D-6F5FADCB9946}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Modules/UI.lvlib/Main.vi</Property>
 				<Property Name="Source[1].sourceInclusion" Type="Str">TopLevel</Property>
 				<Property Name="Source[1].type" Type="Str">VI</Property>
-				<Property Name="SourceCount" Type="Int">2</Property>
+				<Property Name="Source[2].destinationIndex" Type="Int">2</Property>
+				<Property Name="Source[2].itemID" Type="Ref">/My Computer/Config/config.ini</Property>
+				<Property Name="Source[2].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="SourceCount" Type="Int">3</Property>
 				<Property Name="TgtF_companyName" Type="Str">Centro de Investigaciones en Optica</Property>
-				<Property Name="TgtF_fileDescription" Type="Str">App</Property>
-				<Property Name="TgtF_internalName" Type="Str">App</Property>
+				<Property Name="TgtF_fileDescription" Type="Str">Acquires a battery voltage through a NI DAQ. Saves obtained results to csv file.</Property>
+				<Property Name="TgtF_internalName" Type="Str">Voltage Measurement and Logging</Property>
 				<Property Name="TgtF_legalCopyright" Type="Str">Copyright © 2025 Centro de Investigaciones en Optica</Property>
-				<Property Name="TgtF_productName" Type="Str">App</Property>
+				<Property Name="TgtF_productName" Type="Str">Battery monitor</Property>
 				<Property Name="TgtF_targetfileGUID" Type="Str">{A8BF9DAB-CCBA-43A5-967E-1335DEE77541}</Property>
 				<Property Name="TgtF_targetfileName" Type="Str">Battery monitor.exe</Property>
 				<Property Name="TgtF_versionIndependent" Type="Bool">true</Property>
