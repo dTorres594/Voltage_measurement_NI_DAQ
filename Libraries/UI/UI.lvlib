@@ -99,6 +99,9 @@
 		<Item Name="Config dialog.vi" Type="VI" URL="../Support/Config dialog.vi"/>
 		<Item Name="Save config.vi" Type="VI" URL="../Support/Save config.vi"/>
 	</Item>
+	<Item Name="Controls" Type="Folder">
+		<Item Name="Config diag states--typedef.ctl" Type="VI" URL="../Controls/Config diag states--typedef.ctl"/>
+	</Item>
 	<Item Name="Main.vi" Type="VI" URL="../Main.vi">
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 	</Item>

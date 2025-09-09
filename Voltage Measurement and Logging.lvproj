@@ -21,7 +21,6 @@
 			<Item Name="Test NI DAQ API.vi" Type="VI" URL="../NI_DAQ/Libraries/NI DAQ/Test NI DAQ API.vi"/>
 			<Item Name="Test UI API.vi" Type="VI" URL="../Libraries/UI/Test UI API.vi"/>
 		</Item>
-		<Item Name="Config diag states--typedef.ctl" Type="VI" URL="../Libraries/UI/Controls/Config diag states--typedef.ctl"/>
 		<Item Name="Dependencies" Type="Dependencies"/>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
