@@ -98,6 +98,7 @@
 		<Item Name="Load config.vi" Type="VI" URL="../Support/Load config.vi"/>
 		<Item Name="Config dialog.vi" Type="VI" URL="../Support/Config dialog.vi"/>
 		<Item Name="Save config.vi" Type="VI" URL="../Support/Save config.vi"/>
+		<Item Name="Get remaining time.vi" Type="VI" URL="../Support/Get remaining time.vi"/>
 	</Item>
 	<Item Name="Controls" Type="Folder">
 		<Item Name="Config diag states--typedef.ctl" Type="VI" URL="../Controls/Config diag states--typedef.ctl"/>
