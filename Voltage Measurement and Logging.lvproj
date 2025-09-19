@@ -1,9 +1,10 @@
-<?xml version='1.0'?>
-<Project Type="Project" LVVersion="0">
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<Project Type="Project" LVVersion="20008000">
 	<Property Name="NI.LV.All.SaveVersion" Type="Str">20.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Property Name="NI.Project.Description" Type="Str"></Property>
 	<Item Name="My Computer" Type="My Computer">
+		<Property Name="NI.SortType" Type="Int">3</Property>
 		<Property Name="server.app.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="server.control.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="server.tcp.enabled" Type="Bool">false</Property>
@@ -14,422 +15,77 @@
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
 		<Item Name="Config" Type="Folder">
-			<Item Name="config.ini" Type="Document" URL="Config/config.ini"/>
+			<Item Name="config.ini" Type="Document" URL="../Config/config.ini"/>
 		</Item>
 		<Item Name="Modules" Type="Folder">
-			<Item Name="UI.lvlib" Type="Library" URL="Libraries/UI/UI.lvlib">
-				<Item Name="Public API" Type="Folder">
-					<Item Name="Arguments" Type="Folder">
-						<Item Name="Request" Type="Folder">
-							<Item Name="Stop Argument--cluster.ctl" Type="VI" URL="Libraries/UI/Stop Argument--cluster.ctl"/>
-							<Item Name="Get Module Execution Status Argument--cluster.ctl" Type="VI" URL="Libraries/UI/Get Module Execution Status Argument--cluster.ctl"/>
-							<Item Name="Show Panel Argument--cluster.ctl" Type="VI" URL="Libraries/UI/Show Panel Argument--cluster.ctl"/>
-							<Item Name="Hide Panel Argument--cluster.ctl" Type="VI" URL="Libraries/UI/Hide Panel Argument--cluster.ctl"/>
-							<Item Name="Show Diagram Argument--cluster.ctl" Type="VI" URL="Libraries/UI/Show Diagram Argument--cluster.ctl"/>
-						</Item>
-						<Item Name="Broadcast" Type="Folder">
-							<Item Name="Did Init Argument--cluster.ctl" Type="VI" URL="Libraries/UI/Did Init Argument--cluster.ctl"/>
-							<Item Name="Status Updated Argument--cluster.ctl" Type="VI" URL="Libraries/UI/Status Updated Argument--cluster.ctl"/>
-							<Item Name="Error Reported Argument--cluster.ctl" Type="VI" URL="Libraries/UI/Error Reported Argument--cluster.ctl"/>
-						</Item>
-					</Item>
-					<Item Name="Requests" Type="Folder">
-						<Item Name="Show Panel.vi" Type="VI" URL="Libraries/UI/Show Panel.vi"/>
-						<Item Name="Hide Panel.vi" Type="VI" URL="Libraries/UI/Hide Panel.vi"/>
-						<Item Name="Stop Module.vi" Type="VI" URL="Libraries/UI/Stop Module.vi"/>
-						<Item Name="Get Module Execution Status.vi" Type="VI" URL="Libraries/UI/Get Module Execution Status.vi"/>
-						<Item Name="Show Diagram.vi" Type="VI" URL="Libraries/UI/Show Diagram.vi"/>
-					</Item>
-					<Item Name="Start Module.vi" Type="VI" URL="Libraries/UI/Start Module.vi"/>
-					<Item Name="Synchronize Module Events.vi" Type="VI" URL="Libraries/UI/Synchronize Module Events.vi"/>
-					<Item Name="Obtain Broadcast Events for Registration.vi" Type="VI" URL="Libraries/UI/Obtain Broadcast Events for Registration.vi"/>
-					<Item Name="Null Broadcast Events--constant.vi" Type="VI" URL="Libraries/UI/Null Broadcast Events--constant.vi"/>
-				</Item>
-				<Item Name="Broadcasts" Type="Folder">
-					<Item Name="Broadcast Events--cluster.ctl" Type="VI" URL="Libraries/UI/Broadcast Events--cluster.ctl"/>
-					<Item Name="Obtain Broadcast Events.vi" Type="VI" URL="Libraries/UI/Obtain Broadcast Events.vi"/>
-					<Item Name="Destroy Broadcast Events.vi" Type="VI" URL="Libraries/UI/Destroy Broadcast Events.vi"/>
-					<Item Name="Module Did Init.vi" Type="VI" URL="Libraries/UI/Module Did Init.vi"/>
-					<Item Name="Status Updated.vi" Type="VI" URL="Libraries/UI/Status Updated.vi"/>
-					<Item Name="Error Reported.vi" Type="VI" URL="Libraries/UI/Error Reported.vi"/>
-					<Item Name="Module Did Stop.vi" Type="VI" URL="Libraries/UI/Module Did Stop.vi"/>
-					<Item Name="Update Module Execution Status.vi" Type="VI" URL="Libraries/UI/Update Module Execution Status.vi"/>
-				</Item>
-				<Item Name="Requests" Type="Folder">
-					<Item Name="Request Events--cluster.ctl" Type="VI" URL="Libraries/UI/Request Events--cluster.ctl"/>
-					<Item Name="Obtain Request Events.vi" Type="VI" URL="Libraries/UI/Obtain Request Events.vi"/>
-					<Item Name="Destroy Request Events.vi" Type="VI" URL="Libraries/UI/Destroy Request Events.vi"/>
-				</Item>
-				<Item Name="Private" Type="Folder">
-					<Item Name="Constants" Type="Folder">
-						<Item Name="Config file path--constant.vi" Type="VI" URL="Libraries/UI/Config file path--constant.vi"/>
-						<Item Name="Module Name--constant.vi" Type="VI" URL="Libraries/UI/Module Name--constant.vi"/>
-						<Item Name="Module Timeout--constant.vi" Type="VI" URL="Libraries/UI/Module Timeout--constant.vi"/>
-					</Item>
-					<Item Name="Errors" Type="Folder">
-						<Item Name="Module Not Running--error.vi" Type="VI" URL="Libraries/UI/Module Not Running--error.vi"/>
-						<Item Name="Module Not Stopped--error.vi" Type="VI" URL="Libraries/UI/Module Not Stopped--error.vi"/>
-						<Item Name="Module Not Synced--error.vi" Type="VI" URL="Libraries/UI/Module Not Synced--error.vi"/>
-						<Item Name="Request and Wait for Reply Timeout--error.vi" Type="VI" URL="Libraries/UI/Request and Wait for Reply Timeout--error.vi"/>
-					</Item>
-					<Item Name="Framework Support" Type="Folder">
-						<Item Name="Close Module.vi" Type="VI" URL="Libraries/UI/Close Module.vi"/>
-						<Item Name="Get Module Main VI Information.vi" Type="VI" URL="Libraries/UI/Get Module Main VI Information.vi"/>
-						<Item Name="Handle Exit.vi" Type="VI" URL="Libraries/UI/Handle Exit.vi"/>
-						<Item Name="Hide VI Panel.vi" Type="VI" URL="Libraries/UI/Hide VI Panel.vi"/>
-						<Item Name="Init Module.vi" Type="VI" URL="Libraries/UI/Init Module.vi"/>
-						<Item Name="Open VI Panel.vi" Type="VI" URL="Libraries/UI/Open VI Panel.vi"/>
-					</Item>
-					<Item Name="Typedefs" Type="Folder">
-						<Item Name="Module Data--cluster.ctl" Type="VI" URL="Libraries/UI/Module Data--cluster.ctl"/>
-					</Item>
-				</Item>
-				<Item Name="Module Sync" Type="Folder">
-					<Item Name="Semaphore" Type="Folder">
-						<Item Name="Obtain Module Semaphore.vi" Type="VI" URL="Libraries/UI/Obtain Module Semaphore.vi"/>
-						<Item Name="Acquire Module Semaphore.vi" Type="VI" URL="Libraries/UI/Acquire Module Semaphore.vi"/>
-						<Item Name="Release Module Semaphore.vi" Type="VI" URL="Libraries/UI/Release Module Semaphore.vi"/>
-					</Item>
-					<Item Name="Destroy Sync Refnums.vi" Type="VI" URL="Libraries/UI/Destroy Sync Refnums.vi"/>
-					<Item Name="Get Sync Refnums.vi" Type="VI" URL="Libraries/UI/Get Sync Refnums.vi"/>
-					<Item Name="Synchronize Caller Events.vi" Type="VI" URL="Libraries/UI/Synchronize Caller Events.vi"/>
-					<Item Name="Wait on Event Sync.vi" Type="VI" URL="Libraries/UI/Wait on Event Sync.vi"/>
-					<Item Name="Wait on Module Sync.vi" Type="VI" URL="Libraries/UI/Wait on Module Sync.vi"/>
-				</Item>
-				<Item Name="Support" Type="Folder">
-					<Item Name="Load config.vi" Type="VI" URL="Libraries/UI/Support/Load config.vi"/>
-					<Item Name="Config dialog.vi" Type="VI" URL="Libraries/UI/Support/Config dialog.vi"/>
-					<Item Name="Save config.vi" Type="VI" URL="Libraries/UI/Support/Save config.vi"/>
-					<Item Name="Get remaining time.vi" Type="VI" URL="Libraries/UI/Support/Get remaining time.vi"/>
-				</Item>
-				<Item Name="Controls" Type="Folder">
-					<Item Name="Config diag states--typedef.ctl" Type="VI" URL="Libraries/UI/Controls/Config diag states--typedef.ctl"/>
-				</Item>
-				<Item Name="Main.vi" Type="VI" URL="Libraries/UI/Main.vi"/>
-			</Item>
-			<Item Name="NI DAQ.lvlib" Type="Library" URL="NI_DAQ/Libraries/NI DAQ/NI DAQ.lvlib">
-				<Item Name="Public API" Type="Folder">
-					<Item Name="Arguments" Type="Folder">
-						<Item Name="Request" Type="Folder">
-							<Item Name="Stop Argument--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Stop Argument--cluster.ctl"/>
-							<Item Name="Show Panel Argument--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Show Panel Argument--cluster.ctl"/>
-							<Item Name="Hide Panel Argument--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Hide Panel Argument--cluster.ctl"/>
-							<Item Name="Show Diagram Argument--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Show Diagram Argument--cluster.ctl"/>
-							<Item Name="Get Module Execution Status Argument--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Get Module Execution Status Argument--cluster.ctl"/>
-							<Item Name="Set device name Argument--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Set device name Argument--cluster.ctl"/>
-							<Item Name="Get channel list Argument--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Get channel list Argument--cluster.ctl"/>
-							<Item Name="Get channel list (Reply Payload)--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Get channel list (Reply Payload)--cluster.ctl"/>
-							<Item Name="Start task Argument--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Start task Argument--cluster.ctl"/>
-							<Item Name="Stop task Argument--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Stop task Argument--cluster.ctl"/>
-							<Item Name="Write DO Argument--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Write DO Argument--cluster.ctl"/>
-							<Item Name="Create DI channel Argument--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Create DI channel Argument--cluster.ctl"/>
-							<Item Name="Read DI Argument--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Read DI Argument--cluster.ctl"/>
-							<Item Name="Read DI (Reply Payload)--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Read DI (Reply Payload)--cluster.ctl"/>
-							<Item Name="Get task ref Argument--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Get task ref Argument--cluster.ctl"/>
-							<Item Name="Get task ref (Reply Payload)--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Get task ref (Reply Payload)--cluster.ctl"/>
-							<Item Name="Wake up HL Argument--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Wake up HL Argument--cluster.ctl"/>
-							<Item Name="Wake up HL (Reply Payload)--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Wake up HL (Reply Payload)--cluster.ctl"/>
-							<Item Name="Sleep HL Argument--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Sleep HL Argument--cluster.ctl"/>
-							<Item Name="Create AI channel Argument--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Create AI channel Argument--cluster.ctl"/>
-							<Item Name="Read AI Argument--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Read AI Argument--cluster.ctl"/>
-							<Item Name="Read AI (Reply Payload)--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Read AI (Reply Payload)--cluster.ctl"/>
-							<Item Name="Create AO channel Argument--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Create AO channel Argument--cluster.ctl"/>
-							<Item Name="Write AO Argument--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Write AO Argument--cluster.ctl"/>
-							<Item Name="Validate connection Argument--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Validate connection Argument--cluster.ctl"/>
-							<Item Name="Validate connection (Reply Payload)--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Validate connection (Reply Payload)--cluster.ctl"/>
-							<Item Name="Start continous acquisition Argument--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Start continous acquisition Argument--cluster.ctl"/>
-							<Item Name="Stop continuous acquisition Argument--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Stop continuous acquisition Argument--cluster.ctl"/>
-							<Item Name="Create DO channel Argument--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Create DO channel Argument--cluster.ctl"/>
-							<Item Name="Create CI channel Argument--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Create CI channel Argument--cluster.ctl"/>
-							<Item Name="Read CI Argument--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Read CI Argument--cluster.ctl"/>
-							<Item Name="Read CI (Reply Payload)--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Read CI (Reply Payload)--cluster.ctl"/>
-							<Item Name="Get device model Argument--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Get device model Argument--cluster.ctl"/>
-							<Item Name="Get device model (Reply Payload)--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Get device model (Reply Payload)--cluster.ctl"/>
-							<Item Name="Get device name Argument--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Get device name Argument--cluster.ctl"/>
-							<Item Name="Get device name (Reply Payload)--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Get device name (Reply Payload)--cluster.ctl"/>
-							<Item Name="Create TC channel Argument--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Create TC channel Argument--cluster.ctl"/>
-							<Item Name="Read TC Argument--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Read TC Argument--cluster.ctl"/>
-							<Item Name="Read TC (Reply Payload)--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Read TC (Reply Payload)--cluster.ctl"/>
-							<Item Name="Start Continuous DI Argument--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Start Continuous DI Argument--cluster.ctl"/>
-							<Item Name="Stop continuous DI Argument--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Stop continuous DI Argument--cluster.ctl"/>
-							<Item Name="Start continuous AI Argument--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Start continuous AI Argument--cluster.ctl"/>
-							<Item Name="Stop continuous AI Argument--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Stop continuous AI Argument--cluster.ctl"/>
-							<Item Name="Start continuous TC Argument--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Start continuous TC Argument--cluster.ctl"/>
-							<Item Name="Stop continuous TC Argument--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Stop continuous TC Argument--cluster.ctl"/>
-						</Item>
-						<Item Name="Broadcast" Type="Folder">
-							<Item Name="Did Init Argument--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Did Init Argument--cluster.ctl"/>
-							<Item Name="Status Updated Argument--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Status Updated Argument--cluster.ctl"/>
-							<Item Name="Error Reported Argument--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Error Reported Argument--cluster.ctl"/>
-							<Item Name="Digital data acquired Argument--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Digital data acquired Argument--cluster.ctl"/>
-							<Item Name="Device connected Argument--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Device connected Argument--cluster.ctl"/>
-							<Item Name="Connection failed Argument--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Connection failed Argument--cluster.ctl"/>
-							<Item Name="Analog data acquired Argument--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Analog data acquired Argument--cluster.ctl"/>
-							<Item Name="Counter data acquired Argument--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Counter data acquired Argument--cluster.ctl"/>
-							<Item Name="Temperature data acquired Argument--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Temperature data acquired Argument--cluster.ctl"/>
-						</Item>
-					</Item>
-					<Item Name="Requests" Type="Folder">
-						<Item Name="Show Panel.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Show Panel.vi"/>
-						<Item Name="Hide Panel.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Hide Panel.vi"/>
-						<Item Name="Stop Module.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Stop Module.vi"/>
-						<Item Name="Show Diagram.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Show Diagram.vi"/>
-						<Item Name="Set device name.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Set device name.vi"/>
-						<Item Name="Get channel list.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Get channel list.vi"/>
-						<Item Name="Start task.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Start task.vi"/>
-						<Item Name="Stop task.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Stop task.vi"/>
-						<Item Name="Write DO.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Write DO.vi"/>
-						<Item Name="Create DI channel.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Create DI channel.vi"/>
-						<Item Name="Read DI.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Read DI.vi"/>
-						<Item Name="Get task ref.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Get task ref.vi"/>
-						<Item Name="Wake up HL.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Wake up HL.vi"/>
-						<Item Name="Sleep HL.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Sleep HL.vi"/>
-						<Item Name="Create AI channel.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Create AI channel.vi"/>
-						<Item Name="Read AI.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Read AI.vi"/>
-						<Item Name="Create AO channel.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Create AO channel.vi"/>
-						<Item Name="Write AO.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Write AO.vi"/>
-						<Item Name="Validate connection.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Validate connection.vi"/>
-						<Item Name="Start continous acquisition.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Start continous acquisition.vi"/>
-						<Item Name="Stop continuous acquisition.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Stop continuous acquisition.vi"/>
-						<Item Name="Create DO channel.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Create DO channel.vi"/>
-						<Item Name="Create CI channel.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Create CI channel.vi"/>
-						<Item Name="Read CI.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Read CI.vi"/>
-						<Item Name="Get device model.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Get device model.vi"/>
-						<Item Name="Get device name.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Get device name.vi"/>
-						<Item Name="Create TC channel.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Create TC channel.vi"/>
-						<Item Name="Read TC.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Read TC.vi"/>
-						<Item Name="Start Continuous DI.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Start Continuous DI.vi"/>
-						<Item Name="Stop continuous DI.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Stop continuous DI.vi"/>
-						<Item Name="Start continuous AI.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Start continuous AI.vi"/>
-						<Item Name="Stop continuous AI.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Stop continuous AI.vi"/>
-						<Item Name="Start continuous TC.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Start continuous TC.vi"/>
-						<Item Name="Stop continuous TC.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Stop continuous TC.vi"/>
-					</Item>
-					<Item Name="Start Module.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Start Module.vi"/>
-					<Item Name="Synchronize Module Events.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Synchronize Module Events.vi"/>
-					<Item Name="Obtain Broadcast Events for Registration.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Obtain Broadcast Events for Registration.vi"/>
-					<Item Name="Null Broadcast Events--constant.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Null Broadcast Events--constant.vi"/>
-				</Item>
-				<Item Name="Broadcasts" Type="Folder">
-					<Item Name="Broadcast Events--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Broadcast Events--cluster.ctl"/>
-					<Item Name="Obtain Broadcast Events.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Obtain Broadcast Events.vi"/>
-					<Item Name="Destroy Broadcast Events.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Destroy Broadcast Events.vi"/>
-					<Item Name="Module Did Init.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Module Did Init.vi"/>
-					<Item Name="Status Updated.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Status Updated.vi"/>
-					<Item Name="Error Reported.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Error Reported.vi"/>
-					<Item Name="Module Did Stop.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Module Did Stop.vi"/>
-					<Item Name="Update Module Execution Status.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Update Module Execution Status.vi"/>
-					<Item Name="Digital data acquired.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Digital data acquired.vi"/>
-					<Item Name="Device connected.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Device connected.vi"/>
-					<Item Name="Connection failed.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Connection failed.vi"/>
-					<Item Name="Analog data acquired.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Analog data acquired.vi"/>
-					<Item Name="Counter data acquired.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Counter data acquired.vi"/>
-					<Item Name="Temperature data acquired.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Temperature data acquired.vi"/>
-				</Item>
-				<Item Name="Requests" Type="Folder">
-					<Item Name="Local Instance Requests" Type="Folder">
-						<Item Name="Loc Inst Arguments" Type="Folder">
-							<Item Name="Wake DI HL Argument--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Wake DI HL Argument--cluster.ctl"/>
-						</Item>
-						<Item Name="Local Instance Events SEQ.lvlib" Type="Library" URL="NI_DAQ/Libraries/NI DAQ/Local Instance Events SEQ/Local Instance Events SEQ.lvlib">
-							<Item Name="Obtain SEQ.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Local Instance Events SEQ/Obtain SEQ.vi"/>
-							<Item Name="Read SEQ.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Local Instance Events SEQ/Read SEQ.vi"/>
-							<Item Name="Destroy SEQ.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Local Instance Events SEQ/Destroy SEQ.vi"/>
-						</Item>
-						<Item Name="Local Instance Request Events--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Local Instance Request Events--cluster.ctl"/>
-						<Item Name="Destroy Local Instance Events.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Destroy Local Instance Events.vi"/>
-						<Item Name="Wake DI HL.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Wake DI HL.vi"/>
-					</Item>
-					<Item Name="Private Requests" Type="Folder">
-						<Item Name="Priv Req Arguments" Type="Folder">
-							<Item Name="Sleep DI HL Argument--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Sleep DI HL Argument--cluster.ctl"/>
-							<Item Name="Wake AI HL Argument--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Wake AI HL Argument--cluster.ctl"/>
-							<Item Name="Sleep AI HL Argument--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Sleep AI HL Argument--cluster.ctl"/>
-							<Item Name="Wake TC HL Argument--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Wake TC HL Argument--cluster.ctl"/>
-							<Item Name="Sleep TC HL Argument--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Sleep TC HL Argument--cluster.ctl"/>
-						</Item>
-						<Item Name="Sleep DI HL.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Sleep DI HL.vi"/>
-						<Item Name="Wake AI HL.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Wake AI HL.vi"/>
-						<Item Name="Sleep AI HL.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Sleep AI HL.vi"/>
-						<Item Name="Wake TC HL.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Wake TC HL.vi"/>
-						<Item Name="Sleep TC HL.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Sleep TC HL.vi"/>
-					</Item>
-					<Item Name="Request Events--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Request Events--cluster.ctl"/>
-					<Item Name="Obtain Request Events.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Obtain Request Events.vi"/>
-					<Item Name="Destroy Request Events.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Destroy Request Events.vi"/>
-					<Item Name="Get Module Execution Status.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Get Module Execution Status.vi"/>
-				</Item>
-				<Item Name="Private" Type="Folder">
-					<Item Name="Close Module.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Close Module.vi"/>
-					<Item Name="Handle Exit.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Handle Exit.vi"/>
-					<Item Name="Hide VI Panel.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Hide VI Panel.vi"/>
-					<Item Name="Init Module.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Init Module.vi"/>
-					<Item Name="Module Data--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Module Data--cluster.ctl"/>
-					<Item Name="Module Name--constant.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Module Name--constant.vi"/>
-					<Item Name="Module Not Running--error.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Module Not Running--error.vi"/>
-					<Item Name="Module Not Stopped--error.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Module Not Stopped--error.vi"/>
-					<Item Name="Module Not Synced--error.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Module Not Synced--error.vi"/>
-					<Item Name="Module Running as Cloneable--error.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Module Running as Cloneable--error.vi"/>
-					<Item Name="Module Running as Singleton--error.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Module Running as Singleton--error.vi"/>
-					<Item Name="Request and Wait for Reply Timeout--error.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Request and Wait for Reply Timeout--error.vi"/>
-					<Item Name="Master Reference Not Closed--error.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Master Reference Not Closed--error.vi"/>
-					<Item Name="Module Timeout--constant.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Module Timeout--constant.vi"/>
-					<Item Name="Open VI Panel.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Open VI Panel.vi"/>
-				</Item>
-				<Item Name="Module Sync" Type="Folder">
-					<Item Name="Semaphore" Type="Folder">
-						<Item Name="Obtain Module Semaphore.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Obtain Module Semaphore.vi"/>
-						<Item Name="Acquire Module Semaphore.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Acquire Module Semaphore.vi"/>
-						<Item Name="Release Module Semaphore.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Release Module Semaphore.vi"/>
-						<Item Name="Destroy Module Semaphore Reference.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Destroy Module Semaphore Reference.vi"/>
-					</Item>
-					<Item Name="Destroy Sync Refnums.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Destroy Sync Refnums.vi"/>
-					<Item Name="Get Sync Refnums.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Get Sync Refnums.vi"/>
-					<Item Name="Synchronize Caller Events.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Synchronize Caller Events.vi"/>
-					<Item Name="Wait on Event Sync.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Wait on Event Sync.vi"/>
-					<Item Name="Wait on Module Sync.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Wait on Module Sync.vi"/>
-					<Item Name="Wait on Stop Sync.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Wait on Stop Sync.vi"/>
-				</Item>
-				<Item Name="Multiple Instances" Type="Folder">
-					<Item Name="Module Ring" Type="Folder">
-						<Item Name="Init Select Module Ring.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Init Select Module Ring.vi"/>
-						<Item Name="Update Select Module Ring.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Update Select Module Ring.vi"/>
-						<Item Name="Addressed to This Module.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Addressed to This Module.vi"/>
-					</Item>
-					<Item Name="VI Reference Management.lvlib" Type="Library" URL="NI_DAQ/Libraries/NI DAQ/VI Reference Management/VI Reference Management.lvlib">
-						<Item Name="Private" Type="Folder">
-							<Item Name="Action--enum.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/VI Reference Management/Action--enum.ctl"/>
-							<Item Name="VI Reference AE.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/VI Reference Management/VI Reference AE.vi"/>
-						</Item>
-						<Item Name="Create.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/VI Reference Management/Create.vi"/>
-						<Item Name="Get.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/VI Reference Management/Get.vi"/>
-						<Item Name="Close.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/VI Reference Management/Close.vi"/>
-						<Item Name="Get or Create Master Reference.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/VI Reference Management/Get or Create Master Reference.vi"/>
-						<Item Name="Main VI Type--strict_vi_ref.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/VI Reference Management/Main VI Type--strict_vi_ref.ctl"/>
-					</Item>
-					<Item Name="Clone Registration.lvlib" Type="Library" URL="NI_DAQ/Libraries/NI DAQ/Clone Registration/Clone Registration.lvlib">
-						<Item Name="Private" Type="Folder">
-							<Item Name="Action--enum.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Clone Registration/Action--enum.ctl"/>
-							<Item Name="Clone Registration AE.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Clone Registration/Clone Registration AE.vi"/>
-							<Item Name="Send Last Clone Instance Notification.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Clone Registration/Send Last Clone Instance Notification.vi"/>
-						</Item>
-						<Item Name="Init.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Clone Registration/Init.vi"/>
-						<Item Name="Add.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Clone Registration/Add.vi"/>
-						<Item Name="Remove.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Clone Registration/Remove.vi"/>
-						<Item Name="List Instances.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Clone Registration/List Instances.vi"/>
-						<Item Name="Is Empty.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Clone Registration/Is Empty.vi"/>
-						<Item Name="Is First.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Clone Registration/Is First.vi"/>
-						<Item Name="Obtain Last Clone Instance Notifier.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Clone Registration/Obtain Last Clone Instance Notifier.vi"/>
-						<Item Name="Wait on Last Clone Instance Notification.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Clone Registration/Wait on Last Clone Instance Notification.vi"/>
-						<Item Name="Destroy Last Clone Instance Notifier.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Clone Registration/Destroy Last Clone Instance Notifier.vi"/>
-					</Item>
-					<Item Name="Test Clone Registration API.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Clone Registration/Test Clone Registration API.vi"/>
-					<Item Name="Get Module Running State.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Get Module Running State.vi"/>
-					<Item Name="Is Safe to Destroy Refnums.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Is Safe to Destroy Refnums.vi"/>
-					<Item Name="Module Running State--enum.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Module Running State--enum.ctl"/>
-				</Item>
-				<Item Name="Support" Type="Folder">
-					<Item Name="Get Channels.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Get Channels.vi"/>
-					<Item Name="Create user events.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Support/Create user events.vi"/>
-					<Item Name="Destroy user events.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Support/Destroy user events.vi"/>
-					<Item Name="Wake HL.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Support/Wake HL.vi"/>
-					<Item Name="Sleep HL -- subVI.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Support/Sleep HL -- subVI.vi"/>
-				</Item>
-				<Item Name="Controls" Type="Folder">
-					<Item Name="Continuous aquisition params.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Support/Continuous aquisition params.ctl"/>
-					<Item Name="Task list.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Support/Task list.ctl"/>
-					<Item Name="AI config parameters--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Controls/AI config parameters--cluster.ctl"/>
-					<Item Name="CI config parameters--cluster.ctl" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Controls/CI config parameters--cluster.ctl"/>
-				</Item>
-				<Item Name="Constants" Type="Folder">
-					<Item Name="Channel list header ---constant.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Support/Channel list header ---constant.vi"/>
-				</Item>
-				<Item Name="Main.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Main.vi"/>
-			</Item>
+			<Item Name="UI.lvlib" Type="Library" URL="../Libraries/UI/UI.lvlib"/>
+			<Item Name="NI DAQ.lvlib" Type="Library" URL="../NI_DAQ/Libraries/NI DAQ/NI DAQ.lvlib"/>
 		</Item>
 		<Item Name="Testers" Type="Folder">
-			<Item Name="Test UI API.vi" Type="VI" URL="Libraries/UI/Test UI API.vi"/>
-			<Item Name="Test NI DAQ API.vi" Type="VI" URL="NI_DAQ/Libraries/NI DAQ/Test NI DAQ API.vi"/>
-			<Item Name="Test Thermocouple.vi" Type="VI" URL="Support/Test Thermocouple.vi"/>
+			<Item Name="Test UI API.vi" Type="VI" URL="../Libraries/UI/Test UI API.vi"/>
+			<Item Name="Test NI DAQ API.vi" Type="VI" URL="../NI_DAQ/Libraries/NI DAQ/Test NI DAQ API.vi"/>
+			<Item Name="Test Thermocouple.vi" Type="VI" URL="../Support/Test Thermocouple.vi"/>
 		</Item>
-		<Item Name="Launcher.vi" Type="VI" URL="Launcher.vi"/>
+		<Item Name="Launcher.vi" Type="VI" URL="../Launcher.vi"/>
 		<Item Name="Dependencies" Type="Dependencies"/>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="App" Type="EXE">
-				<Property Name="Absolute[0]" Type="Bool">false</Property>
-				<Property Name="Absolute[1]" Type="Bool">false</Property>
-				<Property Name="Absolute[2]" Type="Bool">false</Property>
-				<Property Name="ActiveXServerName" Type="Str"></Property>
-				<Property Name="AliasID" Type="Str">{907BB27A-F5F7-41CA-A066-4A412036FC9D}</Property>
+				<Property Name="App_copyErrors" Type="Bool">true</Property>
+				<Property Name="App_INI_aliasGUID" Type="Str">{907BB27A-F5F7-41CA-A066-4A412036FC9D}</Property>
+				<Property Name="App_INI_GUID" Type="Str">{3BA6C093-676A-4F5A-A5E7-1F5D8A1799B5}</Property>
 				<Property Name="App_serverConfig.httpPort" Type="Int">8002</Property>
-				<Property Name="ApplicationID" Type="Str">{A8BF9DAB-CCBA-43A5-967E-1335DEE77541}</Property>
-				<Property Name="ApplicationName" Type="Str">Battery monitor.exe</Property>
-				<Property Name="BuildName" Type="Str">App</Property>
-				<Property Name="CommandLineArguments" Type="Bool">false</Property>
-				<Property Name="CopyErrors" Type="Bool">true</Property>
-				<Property Name="DependencyFolderDestination" Type="Int">0</Property>
-				<Property Name="DependencyFolderInclusion" Type="Str">As Needed</Property>
-				<Property Name="DestinationItemCount" Type="Int">3</Property>
-				<Property Name="DestinationName[0]" Type="Str">Battery monitor.exe</Property>
-				<Property Name="DestinationName[1]" Type="Str">Config</Property>
-				<Property Name="DestinationName[2]" Type="Str">Support Directory</Property>
-				<Property Name="Disconnect" Type="Bool">true</Property>
-				<Property Name="INIID" Type="Str">{3BA6C093-676A-4F5A-A5E7-1F5D8A1799B5}</Property>
-				<Property Name="ININame" Type="Str">LabVIEW.ini</Property>
-				<Property Name="MathScript" Type="Bool">true</Property>
-				<Property Name="Path[0]" Type="Path">../../Voltage_measurement_NI_DAQ/App/internal.llb</Property>
-				<Property Name="Path[1]" Type="Path">../../Voltage_measurement_NI_DAQ/App/Config</Property>
-				<Property Name="Path[2]" Type="Path">../../Voltage_measurement_NI_DAQ/App/data</Property>
-				<Property Name="Source[2].destinationIndex" Type="Int">2</Property>
-				<Property Name="Source[2].itemID" Type="Ref">/My Computer/Config/config.ini</Property>
-				<Property Name="Source[2].sourceInclusion" Type="Str">Include</Property>
-				<Property Name="SourceInfoItemCount" Type="Int">6</Property>
-				<Property Name="SourceItem[0].FolderTopLevelVI" Type="Str">Never</Property>
-				<Property Name="SourceItem[0].Inclusion" Type="Str">Startup VI</Property>
-				<Property Name="SourceItem[0].ItemID" Type="Ref">/My Computer/Launcher.vi</Property>
-				<Property Name="SourceItem[2].FolderInclusion" Type="Str">As Needed</Property>
-				<Property Name="SourceItem[2].FolderTopLevelVI" Type="Str">Never</Property>
-				<Property Name="SourceItem[2].Inclusion" Type="Str">As Needed</Property>
-				<Property Name="SourceItem[2].IsFolder" Type="Bool">true</Property>
-				<Property Name="SourceItem[2].ItemID" Type="Ref">/My Computer/Modules/UI.lvlib</Property>
-				<Property Name="SourceItem[3].FolderDestination" Type="Int">2</Property>
-				<Property Name="SourceItem[3].FolderInclusion" Type="Str">As Needed</Property>
-				<Property Name="SourceItem[3].FolderTopLevelVI" Type="Str">Never</Property>
-				<Property Name="SourceItem[3].Inclusion" Type="Str">As Needed</Property>
-				<Property Name="SourceItem[3].IsFolder" Type="Bool">true</Property>
-				<Property Name="SourceItem[3].ItemID" Type="Ref">/My Computer/Modules/NI DAQ.lvlib</Property>
-				<Property Name="SourceItem[4].ApplyDestination" Type="Bool">true</Property>
-				<Property Name="SourceItem[4].ApplyInclusion" Type="Bool">false</Property>
-				<Property Name="SourceItem[4].ApplyPassword" Type="Bool">false</Property>
-				<Property Name="SourceItem[4].ApplyProperties" Type="Bool">false</Property>
-				<Property Name="SourceItem[4].FolderDestination" Type="Int">-1</Property>
-				<Property Name="SourceItem[4].FolderInclusion" Type="Str">As Needed</Property>
-				<Property Name="SourceItem[4].FolderTopLevelVI" Type="Str">Never</Property>
-				<Property Name="SourceItem[4].Inclusion" Type="Str">As Needed</Property>
-				<Property Name="SourceItem[4].IsFolder" Type="Bool">true</Property>
-				<Property Name="SourceItem[4].ItemID" Type="Ref">/My Computer/Modules</Property>
-				<Property Name="SourceItem[5].ApplyDestination" Type="Bool">true</Property>
-				<Property Name="SourceItem[5].ApplyInclusion" Type="Bool">false</Property>
-				<Property Name="SourceItem[5].ApplyPassword" Type="Bool">false</Property>
-				<Property Name="SourceItem[5].ApplyProperties" Type="Bool">false</Property>
-				<Property Name="SourceItem[5].FolderDestination" Type="Int">-1</Property>
-				<Property Name="SourceItem[5].FolderInclusion" Type="Str">As Needed</Property>
-				<Property Name="SourceItem[5].FolderTopLevelVI" Type="Str">Never</Property>
-				<Property Name="SourceItem[5].Inclusion" Type="Str">As Needed</Property>
-				<Property Name="SourceItem[5].IsFolder" Type="Bool">true</Property>
-				<Property Name="SourceItem[5].ItemID" Type="Ref">/My Computer/Testers</Property>
-				<Property Name="StripLib" Type="Bool">true</Property>
-				<Property Name="SupportedLanguage[0]." Type="Str">English</Property>
-				<Property Name="SupportedLanguageCount" Type="Int">1</Property>
-				<Property Name="TLBID" Type="Str"></Property>
-				<Property Name="VersionInfoCompanyName" Type="Str">Centro de Investigaciones en Optica</Property>
-				<Property Name="VersionInfoFileDescription" Type="Str">Acquires a battery voltage through a NI DAQ. Saves obtained results to csv file.</Property>
-				<Property Name="VersionInfoFileType" Type="Int">1</Property>
-				<Property Name="VersionInfoFileVersionBuild" Type="Int">5</Property>
-				<Property Name="VersionInfoFileVersionMajor" Type="Int">1</Property>
-				<Property Name="VersionInfoInternalName" Type="Str">Voltage Measurement and Logging</Property>
-				<Property Name="VersionInfoLegalCopyright" Type="Str">Copyright © 2025 Centro de Investigaciones en Optica</Property>
-				<Property Name="VersionInfoProductName" Type="Str">Battery monitor</Property>
+				<Property Name="App_serverType" Type="Int">1</Property>
+				<Property Name="Bld_autoIncrement" Type="Bool">true</Property>
+				<Property Name="Bld_buildCacheID" Type="Str">{F42B35DE-DFA1-4B39-8375-2477A58A0DA2}</Property>
+				<Property Name="Bld_buildSpecName" Type="Str">App</Property>
+				<Property Name="Bld_excludeLibraryItems" Type="Bool">true</Property>
+				<Property Name="Bld_excludePolymorphicVIs" Type="Bool">true</Property>
+				<Property Name="Bld_excludeTypedefs" Type="Bool">true</Property>
+				<Property Name="Bld_localDestDir" Type="Path">../App</Property>
+				<Property Name="Bld_localDestDirType" Type="Str">relativeToProject</Property>
+				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
+				<Property Name="Bld_previewCacheID" Type="Str">{31280F5C-8505-4672-936F-48A12475211D}</Property>
+				<Property Name="Bld_supportedLanguage[0]" Type="Str">English</Property>
+				<Property Name="Bld_supportedLanguageCount" Type="Int">1</Property>
+				<Property Name="Bld_targetDestDir" Type="Path"></Property>
+				<Property Name="Bld_version.build" Type="Int">5</Property>
+				<Property Name="Bld_version.major" Type="Int">1</Property>
+				<Property Name="Destination[0].destName" Type="Str">Battery monitor.exe</Property>
+				<Property Name="Destination[0].path" Type="Path">../Voltage_measurement_NI_DAQ/App/Battery monitor.exe</Property>
+				<Property Name="Destination[0].type" Type="Str">App</Property>
+				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
+				<Property Name="Destination[1].path" Type="Path">../Voltage_measurement_NI_DAQ/App/data</Property>
+				<Property Name="Destination[2].destName" Type="Str">Config</Property>
+				<Property Name="Destination[2].path" Type="Path">../Voltage_measurement_NI_DAQ/App/Config</Property>
+				<Property Name="DestinationCount" Type="Int">3</Property>
+				<Property Name="Source[0].itemID" Type="Str">{0FA289D5-2BE7-4500-9BE3-8B0D6D84FDD3}</Property>
+				<Property Name="Source[0].type" Type="Str">Container</Property>
+				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Launcher.vi</Property>
+				<Property Name="Source[1].sourceInclusion" Type="Str">TopLevel</Property>
+				<Property Name="Source[1].type" Type="Str">VI</Property>
+				<Property Name="Source[2].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[2].itemID" Type="Ref">/My Computer/Modules/UI.lvlib</Property>
+				<Property Name="Source[2].Library.allowMissingMembers" Type="Bool">true</Property>
+				<Property Name="Source[2].type" Type="Str">Library</Property>
+				<Property Name="Source[3].destinationIndex" Type="Int">1</Property>
+				<Property Name="Source[3].itemID" Type="Ref">/My Computer/Modules/NI DAQ.lvlib</Property>
+				<Property Name="Source[3].Library.allowMissingMembers" Type="Bool">true</Property>
+				<Property Name="Source[3].type" Type="Str">Library</Property>
+				<Property Name="Source[4].Container.applyDestination" Type="Bool">true</Property>
+				<Property Name="Source[4].itemID" Type="Ref">/My Computer/Modules</Property>
+				<Property Name="Source[4].type" Type="Str">Container</Property>
+				<Property Name="Source[5].Container.applyDestination" Type="Bool">true</Property>
+				<Property Name="Source[5].itemID" Type="Ref">/My Computer/Testers</Property>
+				<Property Name="Source[5].type" Type="Str">Container</Property>
+				<Property Name="SourceCount" Type="Int">7</Property>
+				<Property Name="TgtF_companyName" Type="Str">Centro de Investigaciones en Optica</Property>
+				<Property Name="TgtF_fileDescription" Type="Str">Acquires a battery voltage through a NI DAQ. Saves obtained results to csv file.</Property>
+				<Property Name="TgtF_internalName" Type="Str">Voltage Measurement and Logging</Property>
+				<Property Name="TgtF_legalCopyright" Type="Str">Copyright © 2025 Centro de Investigaciones en Optica</Property>
+				<Property Name="TgtF_productName" Type="Str">Battery monitor</Property>
+				<Property Name="TgtF_targetfileGUID" Type="Str">{A8BF9DAB-CCBA-43A5-967E-1335DEE77541}</Property>
+				<Property Name="TgtF_targetfileName" Type="Str">Battery monitor.exe</Property>
 			</Item>
 		</Item>
 	</Item>
